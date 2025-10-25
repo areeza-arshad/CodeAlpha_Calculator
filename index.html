@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - Task 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" id="display" placeholder="0" readonly>
+                </div>
+                <div class="input-container">
+                    <div class="grid-container">
+                    <input type="button" value="AC" onclick="clearDisplay()" class="operator">
+                    <input type="button" value="DE" onclick="deleteDisplay()" class="operator">
+                    <input type="button" value="." onclick="displayValue('.')" class="operator">
+                    <input type="button" value="/" onclick="displayValue('/')" class="operator">
+                    </div>
+                    <div class="grid-container">
+                        <input type="button" value="7" onclick="displayValue('7')">
+                        <input type="button" value="8" onclick="displayValue('8')">
+                        <input type="button" value="9" onclick="displayValue('9')">
+                        <input type="button" value="*" onclick="displayValue('*')" class="operator">
+                    </div>
+                    <div class="grid-container">
+                        <input type="button" value="4" onclick="displayValue('4')">
+                        <input type="button" value="5" onclick="displayValue('5')">
+                        <input type="button" value="6" onclick="displayValue('6')">
+                        <input type="button" value="-" onclick="displayValue('-')" class="operator">
+                    </div>
+                    <div class="grid-container">
+                        <input type="button" value="1" onclick="displayValue('1')">
+                        <input type="button" value="2" onclick="displayValue('2')">
+                        <input type="button" value="3" onclick="displayValue('3')">
+                        <input type="button" value="+" onclick="displayValue('+')" class="operator">
+                    </div>
+                    <div class="grid-container">
+                        <input type="button" value="00" onclick="displayValue('00')">
+                        <input type="button" value="0" onclick="displayValue('0')">
+                        <input type="button" value="=" class="equal" onclick="calculate()">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="history-container">
+            <h3>history</h3>
+            <p id="history" class="history"><br></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
